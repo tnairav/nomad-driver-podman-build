@@ -23,8 +23,8 @@ jobs:
           go-version: '1.18.x'
       - run: |
           pwd
-          git clone https://github.com/hashicorp/nomad-driver-podman
-          cd nomad-driver-podman
+          git clone https://github.com/hashicorp/nomad-driver-podman build
+          cd build
           CGO_ENABLED=0 go build .
           strip nomad-driver-podman
           mv nomad-driver-podman ..
